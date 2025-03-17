@@ -91,5 +91,9 @@ section {
 }
 .caption p{
     font-size: .9rem;
-    margin-left: 10px;
+   
+}
+.caption span{
+    font-weight: 900;
+    margin-right: 5px;
 }
