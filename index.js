@@ -50,7 +50,7 @@ for(let i = 0; i < posts.length; i++){
             <div class="reaction-bottom">
                 <h3 class="no-of-likes">${post.likes} likes</h3>
                 <div class="caption">
-                    <p class="username"><span>${post.username}</span>${post.comment}</p>
+                    <p><span>${post.username}</span>${post.comment}</p>
                 </div>
             </div>
 
