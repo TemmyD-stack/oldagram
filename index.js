@@ -41,7 +41,7 @@ for(let i = 0; i < posts.length; i++){
                     <p class="location">${post.location}</p>
                 </div>
             </div>
-            <img src="${post.post}" alt="">
+            <img src=${post.post} alt="">
             <div class="reactions-top">
                 <div class="icon"><i class="fa-regular fa-heart"></i></div>
                 <div class="icon"><i class="fa-regular fa-comment"></i></div>
