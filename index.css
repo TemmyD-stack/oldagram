@@ -45,10 +45,10 @@ section .profile-picture{
     margin-left: 15px;
    
 }
-section {
+/* section {
    
     border-bottom:1px solid #ccc;
-}
+} */
 
 .heading{
     display: flex;
@@ -80,6 +80,7 @@ section {
 }
 .reaction-bottom{
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 .caption{
     padding: 10px 0;
