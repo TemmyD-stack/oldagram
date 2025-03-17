@@ -45,16 +45,15 @@ section .profile-picture{
     margin-left: 15px;
    
 }
-/* section {
+section {
    
     border-bottom:1px solid #ccc;
-} */
+}
 
 .heading{
     display: flex;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
 
 }
 
