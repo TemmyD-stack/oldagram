@@ -17,7 +17,7 @@ const posts = [
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
-        {
+    {
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -31,31 +31,48 @@ const posts = [
 const postContainer = document.querySelector(".post-container");
 
 for(let i = 0; i < posts.length; i++){
-    const post = posts[i];
-    const postElement = `
+    const poster = posts[i];
+    const postElement = 
+    `
         <section class="section-one">
             <div class="heading">
-                <img src=${post.avatar} alt="profile picture" class="profile-picture">
+                <img src=${poster.avatar} alt="profile picture" class="profile-picture">
                 <div class="main-heading">
-                    <h2>${post.name}</h2>
-                    <p class="location">${post.location}</p>
+                    <h2>${poster.name}</h2>
+                    <p class="location">${poster.location}</p>
                 </div>
             </div>
-            <img src=${post.post} alt="">
+            <img src=${poster.post} alt="Your picture post" class="post-picture" id="post-img">
             <div class="reactions-top">
-                <div class="icon"><i class="fa-regular fa-heart"></i></div>
+                <div class="icon"><i class="fa-regular fa-heart" ></i></div>
                 <div class="icon"><i class="fa-regular fa-comment"></i></div>
                 <div class="icon"><i class="fa-regular fa-paper-plane"></i></div>
             </div>
             <div class="reaction-bottom">
-                <h3 class="no-of-likes">${post.likes} likes</h3>
+                <h3 class="no-of-likes" >${poster.likes} likes</h3>
                 <div class="caption">
-                    <p><span>${post.username}</span>${post.comment}</p>
+                    <p><span>${poster.username}</span>${poster.comment}</p>
                 </div>
             </div>
 
         </section>
-    `;
+    `
+    ;
 
     postContainer.innerHTML += postElement;
 }
+const likeBtn = document.querySelector("#like-btn");
+
+// likeBtn.addEventListener.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//         const likes = document.querySelector("#no-of-likes");
+//         likes.textContent = `${poster.likes + 1} likes`;
+//     });
+// });
+document.querySelectorAll(".like-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+        const index = this.getAttribute("data-index"); // Get the post index
+        posts[index].likes += 1; // Increment likes
+        document.getElementById(`likes-${index}`).innerHTML = `${posts[index].likes} likes`; // Update the UI
+    });
+});
