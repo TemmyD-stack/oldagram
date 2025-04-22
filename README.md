@@ -1,2 +1,2 @@
 # oldagram
- A clone of instagram
+ A clone of instagram, using html, css and js
